@@ -16,6 +16,10 @@ jobs:
         with:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Print GITHUB_REF
+        run: echo "GITHUB_REF is $GITHUB_REF"
+      - name: Print release version
+        run: echo "Release version is $RELEASE_VERSION"
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
