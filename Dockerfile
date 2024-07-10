@@ -1,4 +1,4 @@
-FROM zqing10/docker:v1.3.4
+FROM zqing10/docker:v2.0.3
 
 RUN conda update -n base -c defaults conda
 RUN conda install -n base python=3.8
